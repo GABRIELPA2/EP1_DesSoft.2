@@ -8,6 +8,22 @@ Created on Thu Sep 24 07:48:51 2020
 """
 
 import random
+def somab(lista):
+    somab=0
+    for valor in lista: # para cada valor na lista
+        somab+=valor # soma as duas cartas 
+    if somab > 9:
+        somab= somab-10
+    print(f'A soma das cartas do banco é: {somab}')
+
+def somaj(lista):
+    somaj=0
+    for valor in lista: # para cada valor na lista
+        somaj+=valor # soma as duas cartas 
+    if somaj > 9:
+        somaj= somaj-10
+    print(f'A soma das cartas do banco é: {somaj}')
+
 
 # fichas= int(input('Quantidade de fichas: '))
 # aposta= int(input('Quanto deseja apostar? '))
@@ -15,7 +31,7 @@ A= 1
 J= 0
 Q= 0
 K= 0
-baralho= [A,2,3,4,5,6,7,8,9,10,J,Q,K]
+baralho= [A,2,3,4,5,6,7,8,9,10,J,Q,K]*4
 baralho[9]= 0
 banco=[]
 jogador=[]
@@ -36,16 +52,20 @@ print(banco)
 print(jogador)
 print(embaralhar)
 
-somab= 0
-for soma in banco:
-    somab+= soma
-if somab > 9:
-    somab= somab-10
-print(somab)
+somab(banco)
+somaj(jogador)
 
-somaj= 0
-for som in jogador:
-    somaj+= som
-if somaj > 9:
-    somaj= somaj-10
-print(somaj)
+
+# caso ele aposte no jogador
+#if somab < somaj and aposta_em_quem == jogador:
+   # fichas= fichas + aposta
+
+    
+
+
+
+# fichas= int(input('Quantidade de fichas: '))
+# aposta= int(input('Quanto deseja apostar? '))
+# aposta_em_quem= int(input('Em quem vai apostra' ))
+
+
